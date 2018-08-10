@@ -44,6 +44,7 @@ public class Siren {
     private ISirenListener mSirenListener;
     private WeakReference<Activity> mActivityRef;
 
+    public SirenAlertType alertType = SirenAlertType.OPTION;
     /**
      * Determines alert type during version code verification
      */
@@ -193,7 +194,6 @@ public class Siren {
             return false;
         }
 
-        SirenAlertType alertType = null;
         String[] minVersionNumbers = minVersionName.split("\\.");
         String[] currentVersionNumbers = currentVersionName.split("\\.");
         //noinspection ConstantConditions
